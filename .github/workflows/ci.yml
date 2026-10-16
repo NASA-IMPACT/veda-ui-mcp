@@ -20,3 +20,17 @@ jobs:
       - run: npx tsc --noEmit
       - run: npm test
       - run: npm run build
+      # A resource read returns a whole bundle; Vercel caps function responses at 4.5 MB.
+      - name: Bundles under 4 MiB
+        run: |
+          node -e '
+            const fs = require("fs");
+            const limit = 4 * 1024 * 1024;
+            let over = 0;
+            for (const f of fs.readdirSync("dist").filter((f) => f.endsWith(".html"))) {
+              const size = fs.statSync(`dist/${f}`).size;
+              console.log(`${f}: ${size} bytes`);
+              if (size > limit) { console.error(`${f} is over ${limit} bytes`); over++; }
+            }
+            process.exit(over ? 1 : 0);
+          '
