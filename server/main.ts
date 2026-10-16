@@ -9,7 +9,7 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { createApp } from "./app.js";
-import { MCP_PATH, RASTER_ROOT, STAC_ROOT, validateConfig } from "./config.js";
+import { MCP_PATH_REDACTED, RASTER_ROOT, STAC_ROOT, validateConfig } from "./config.js";
 import { createServer } from "./server.js";
 
 // Streamable HTTP transport as a long-lived process (local, Heroku).
@@ -27,7 +27,7 @@ export async function startStreamableHTTPServer(
     console.log(`  port:        ${port}`);
     console.log(`  stac root:   ${STAC_ROOT}`);
     console.log(`  raster root: ${RASTER_ROOT}`);
-    console.log(`  endpoints:   http://localhost:${port}${MCP_PATH} (POST, MCP)`);
+    console.log(`  endpoints:   http://localhost:${port}${MCP_PATH_REDACTED} (POST, MCP)`);
     console.log(`               http://localhost:${port}/health (GET, liveness)`);
   });
 
