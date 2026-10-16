@@ -56,7 +56,7 @@ export const MapViewSchema = z.object({
 });
 
 // A swipe-compare of two raster layers (same collection + two dates for a
-// before/after, or two collections for a cross-dataset compare). The map
+// before/after, or two collections for a cross-collection compare). The map
 // resource renders both this and the single-layer variant, so the two share
 // the same resource URI and are parsed by parseMapResourceView below. bbox is
 // the LEFT side's extent, used only for the initial camera.

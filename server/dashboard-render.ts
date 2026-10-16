@@ -1,4 +1,4 @@
-// Dashboard Render resolution (see CONTEXT.md): turn a collection's `renders`
+// Dashboard Render resolution (see GLOSSARY.md): turn a collection's `renders`
 // metadata into map-layer config, guarding against the render params that
 // break the map component. Split from the STAC client so the mappability
 // rules live in one place.

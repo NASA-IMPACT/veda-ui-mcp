@@ -35,7 +35,7 @@ How code in this repo is written. Reviewers (human and agent) check changes agai
 
 ## Vocabulary
 
-- Name things with the terms in [CONTEXT.md](CONTEXT.md) in code, tests, commits and docs. A concept that has no entry there gets one in the same change.
+- Name things with the terms in [GLOSSARY.md](GLOSSARY.md) in code, tests, commits and docs, and respect its _Avoid_ lists. A concept that has no entry there gets one in the same change.
 
 ## Comments
 

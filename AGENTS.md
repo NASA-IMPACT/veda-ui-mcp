@@ -5,7 +5,7 @@ MCP App: tools over the VEDA STAC catalog whose results render veda-ui-blocks wi
 ## Read before changing code
 
 - [CODING_STANDARDS.md](CODING_STANDARDS.md): how code here is written. Reviews check changes against it.
-- [CONTEXT.md](CONTEXT.md): domain glossary (Collection, View, Picker, View Contract, ...). Name things with its terms.
+- [GLOSSARY.md](GLOSSARY.md): domain vocabulary (Collection, View, Widget, Pick, ...). Name things with its terms and respect its _Avoid_ lists.
 - [docs/adr/](docs/adr/): binding decisions. A change that contradicts one says so explicitly.
 - [ARCHITECTURE.md](ARCHITECTURE.md): MCP primer and repo map, for orientation.
 

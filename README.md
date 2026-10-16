@@ -4,7 +4,7 @@ MCP App for the VEDA STAC catalog: tools that render interactive widgets
 (collection picker, raster map) inline in Claude or ChatGPT.
 
 - [ARCHITECTURE.md](ARCHITECTURE.md) — MCP concepts and how this repo maps onto them
-- [CONTEXT.md](CONTEXT.md) — domain glossary
+- [GLOSSARY.md](GLOSSARY.md) — domain glossary
 
 ## Tools
 
