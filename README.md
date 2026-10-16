@@ -68,18 +68,26 @@ Env vars (all optional):
 
 ### Vercel
 
-Vercel's Git integration deploys: push to `main` redeploys production, PRs
-get preview deployments (behind Vercel's default protection). GitHub Actions
-(`.github/workflows/ci.yml`) only typechecks, tests and builds.
-
 - `api/index.js` exports the Express app as one function; `vercel.json`
   rewrites every path to it, runs `npm run build`, and ships `dist/*.html`
   (the view bundles read at request time) via `includeFiles`.
 - `engines.node: 22.x` pins the runtime.
 
-One-time setup (dashboard): import the repo, set `MCP_PATH_TOKEN`
+One-time setup: create a Vercel project, set `MCP_PATH_TOKEN`
 (`openssl rand -hex 16`) for Production, make sure Deployment Protection
 does not cover Production.
+
+Deploy either through Vercel's Git integration (push to the production
+branch redeploys) or from a checkout with the CLI:
+
+```bash
+npx vercel link            # once: pick the project
+npx vercel deploy          # preview (behind Vercel's default protection)
+npx vercel deploy --prod   # production
+```
+
+GitHub Actions (`.github/workflows/ci.yml`) only typechecks, tests and
+builds; it does not deploy.
 
 Verify: `curl https://<domain>/health` → `{"status":"ok","transport":"http"}`.
 The connector URL is `https://<domain>/mcp/<token>`.
