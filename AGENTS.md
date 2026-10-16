@@ -17,7 +17,7 @@ Install with plain `npm install`: its `postinstall` applies `patches/`. With `--
 
 ## Deploying
 
-Production is a Vercel project deployed by hand from a checkout: `npx vercel deploy --prod` (no Git integration, so merging deploys nothing). `npx vercel link` writes `.env.local` with a short-lived OIDC token and appends to `.gitignore`: delete the first, revert the second. `MCP_PATH_TOKEN` lives only in the host's environment and local `.env` (gitignored).
+Setup and env vars: [docs/deployment.md](docs/deployment.md). Production is a Vercel project deployed by hand from a checkout: `npx vercel deploy --prod` (no Git integration, so merging deploys nothing). `npx vercel link` writes `.env.local` with a short-lived OIDC token and appends to `.gitignore`: delete the first, revert the second. `MCP_PATH_TOKEN` lives only in the host's environment and local `.env` (gitignored).
 
 ## Issue tracker
 
