@@ -19,6 +19,12 @@ export const MCP_PATH = process.env.MCP_PATH_TOKEN
   ? `/mcp/${process.env.MCP_PATH_TOKEN}`
   : "/mcp";
 
+// The path as printed in logs: the token is the credential, so it never
+// reaches stdout.
+export const MCP_PATH_REDACTED = process.env.MCP_PATH_TOKEN
+  ? "/mcp/<token>"
+  : "/mcp";
+
 // Fail loud on clearly-wrong config instead of running against a broken catalog.
 export function validateConfig(): void {
   if (process.env.VEDA_STAC_ROOT) {

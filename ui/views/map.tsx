@@ -1,7 +1,7 @@
 // Map view (show_map / run_demo / compare_map): raster map rendered with
 // veda-ui-blocks — the single-layer variant for kind "map", the swipe-compare
 // variant for kind "compare". No header bar: the in-map legend already
-// surfaces the dataset info pulled from STAC, so title/dates above the map
+// surfaces the collection info pulled from STAC, so title/dates above the map
 // would just duplicate it.
 import {
   CARTO_DARK_WITH_LABELS_BASEMAP_STYLE,

@@ -1,7 +1,7 @@
 # Architecture
 
 How this app works, for someone who hasn't built an MCP server before.
-Domain terms (Collection, View, Picker, ...) are defined in [CONTEXT.md](CONTEXT.md).
+Domain terms (Collection, View, Widget, Picker, ...) are defined in [GLOSSARY.md](GLOSSARY.md).
 
 ## MCP server basics
 

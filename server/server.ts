@@ -40,7 +40,7 @@ const DIST_DIR = import.meta.filename.endsWith(".ts")
   ? path.join(import.meta.dirname, "..", "dist")
   : path.join(import.meta.dirname, "..");
 
-// Demo dataset: an NO2 collection whose renders metadata is consistent with
+// Demo Collection: an NO2 collection whose renders metadata is consistent with
 // its items, so the veda-ui-blocks map can actually tile it ("no2-monthly"
 // declares a "no2" asset its items don't have — see getMapConfig's guard).
 const DEMO_COLLECTION = "no2-monthly-diff";
@@ -101,7 +101,7 @@ function compareSide({ collectionId, collectionTitle, renderKey, dateRange }: Ma
   return { collectionId, collectionTitle, renderKey, dateRange };
 }
 
-// Resolve each side with the same getMapConfig the single-layer map uses; the
+// Resolve each side with the same getMapConfig the Map View uses; the
 // two calls are independent so they run in parallel. A MapConfigError on either
 // side surfaces that side's corrective message — the agent only fixes the bad
 // side.
